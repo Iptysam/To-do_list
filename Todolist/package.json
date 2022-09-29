@@ -8,6 +8,14 @@
     "start": "webpack serve --open",
     "build": "webpack"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iptysam/To-do_list.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Iptysam/To-do_list/issues"
+  },
+  "homepage": "https://github.com/Iptysam/To-do_list#readme",
   "keywords": [],
   "author": "",
   "license": "ISC",
