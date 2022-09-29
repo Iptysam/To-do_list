@@ -17,7 +17,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link]( https://iptysam.github.io/AwesomeBooks_E6/)
+[Live Demo Link]( https://iptysam.github.io/)
 
 ## Getting Started
 
@@ -31,7 +31,7 @@
 - If it suits you, on your local computer, create a directory in your preferred location (e.g in the Desktop or Document directory)
 ### Install
 - Open your Terminal/Powershell or any command line interface you use, then navigate to your created above directory or the directory you'll like to clone this project directory.
-- Type `git clone https://github.com/iptysam/AwesomeBooks_E6` if your're using https with git or `git clone git@github.com/tonnymuchui/Awesome-books` if your preferred is ssh and hit enter.
+- Type `git clone (https://github.com/Iptysam/To-do_list.git)` if your're using https with git or `git clone ` if your preferred is ssh and hit enter.
 - Navigate to the `Conference` directory on your local computer in your above chosen directory and open the `index.html` file.
 ### Usage
 - You can view the HTML document in your preferred or default browser.
