@@ -5,19 +5,18 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
   },
   devServer: {
-  static: './dist',
+    static: './docs',
   },
-plugins: [
+  plugins: [
   new HtmlWebpackPlugin({
     template: './src/index.html',
   }),
 ],
   output: {
     filename: '[name].main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
   },
   module: {
   rules: [
