@@ -17,7 +17,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://iptysam.github.io/](https://iptysam.github.io/To-do_list/)
+[Live Demo Link]( [https://iptysam.github.io/](https://iptysam.github.io/To-do_list/])
 
 ## Getting Started
 
