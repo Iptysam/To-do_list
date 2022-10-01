@@ -30,8 +30,7 @@ document.addEventListener('click', (event) => {
 });
 
 clearButton.addEventListener('click', () => {
-  const filteredList = list.filter((obj) => obj.complete !== true);
-  localStorage.setItem('listStorage', JSON.stringify(filteredList));
+  
   Tasklist.createList();
   window.location.reload();
 });

@@ -93,26 +93,12 @@ i {
   display: inline;
 }
 
-.inline {
-  display: inline;
-}
-
 .fa-trash-can {
   display: none;
 }
 
 .fa-trash-can:hover {
   color: blue;
-}
-
-input[type="checkbox"] {
-  height: 20px;
-  width: 20px;
-  color: rgb(128, 77, 0);
-}
-
-.checkbox:checked::before {
-  background-color: rgb(100, 128, 0);
 }
 
 .fa-ellipsis-vertical {
