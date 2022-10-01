@@ -24,7 +24,7 @@ export default class Tasklist {
     listContainer.innerHTML = displayList;
     const ellipsis = document.querySelectorAll('.fa-ellipsis-vertical');
     const removeItem = document.querySelectorAll('.delete');
-    const checkBox = document.querySelectorAll('.box-check'); 
+    const checkBox = document.querySelectorAll('.box-check');
 
     removeItem.forEach((del, i) => {
       del.addEventListener('click', () => {
@@ -49,15 +49,15 @@ export default class Tasklist {
     }
 
     checkBox.forEach((check, index) => {
-        check.addEventListener('change', () => {
-          if (check.checked === true) {
-            list[index].complete = true;
-          } else {
-            list[index].complete = false;
-          }
-          localStorage.setItem('listStorage', JSON.stringify(list));
-        });
+      check.addEventListener('change', () => {
+        if (check.checked === true) {
+          list[index].complete = true;
+        } else {
+          list[index].complete = false;
+        }
+        localStorage.setItem('listStorage', JSON.stringify(list));
       });
+    });
   };
 
   static addToList = () => {
