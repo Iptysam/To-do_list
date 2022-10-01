@@ -14,6 +14,9 @@ export default class Tasklist {
     const listContainer = document.querySelector('.todolist');
     const displayList = list.map((list, index) => `<li class="list-item " 
       id="${index}">
+      <div class="inline">
+      <input id="box-check" type=checkbox class="box-check" name="checkbox">
+      </div>
       <input type="text" id="xx" class="to-do input-text" value="${list.description}" >
       <div class="ellipsis-container">
       <i class="fa-solid fa-ellipsis-vertical">
@@ -21,6 +24,7 @@ export default class Tasklist {
     listContainer.innerHTML = displayList;
     const ellipsis = document.querySelectorAll('.fa-ellipsis-vertical');
     const removeItem = document.querySelectorAll('.delete');
+    const checkBox = document.querySelectorAll('.box-check'); 
 
     removeItem.forEach((del, i) => {
       del.addEventListener('click', () => {
@@ -43,6 +47,17 @@ export default class Tasklist {
         ellipsis[i].style.display = 'none';
       });
     }
+
+    checkBox.forEach((check, index) => {
+        check.addEventListener('change', () => {
+          if (check.checked === true) {
+            list[index].complete = true;
+          } else {
+            list[index].complete = false;
+          }
+          localStorage.setItem('listStorage', JSON.stringify(list));
+        });
+      });
   };
 
   static addToList = () => {

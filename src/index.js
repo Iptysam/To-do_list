@@ -1,6 +1,6 @@
 import './style.css';
 
-import Tasklist, { addListItem } from './modules/script.js';
+import Tasklist, { addListItem, list } from './modules/script.js';
 
 const enterKey = document.getElementById('enter-key');
 const clearButton = document.querySelector('.list-clear');
@@ -32,4 +32,6 @@ document.addEventListener('click', (event) => {
 clearButton.addEventListener('click', () => {
   Tasklist.createList();
   window.location.reload();
+  const filteredList = list.filter((obj) => obj.complete !== true);
+  localStorage.setItem('listStorage', JSON.stringify(filteredList));
 });
