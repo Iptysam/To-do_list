@@ -3,16 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/f836ddcdbf.js" crossorigin="anonymous"></script>
 	<title>To Do List</title>
 </head>
 <body>
-	<section>
-    <div class="alist" >
-      <div class="alist_title l">Today's To Do</div>
-      <div class="alist_input l"><input type="text" value="" placeholder="Add to your list..." ></div>
-      <div class="alist_lists " id="list"></div>
-      <div class="alist_clear l" id="list_clear">Clear all completed</div>
+	<section class="container">
+    <div class="block">
+        <div class="heading">
+            <h3 class="header_list">Today's To Do</h3>
+            <span><i class="fa-solid fa-rotate"></i></span>
+        </div>
+        <div class="task-items">
+            <input id="tasks" class="task-input" type="text" placeholder="Add to your list...">
+            <i id="enter-key" class="fa-sharp fa-solid fa-arrow-left-long arrow icon "></i>
+        </div>
+        <ul class="todolist"></ul>
+        <div class="clear">
+            <button class="list-clear">Clear all completed</button>
+        </div>  
     </div>
-  </section>
+</section>
+    
 </body>
 </html>
