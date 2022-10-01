@@ -21,7 +21,6 @@ export default class Tasklist {
     listContainer.innerHTML = displayList;
     const ellipsis = document.querySelectorAll('.fa-ellipsis-vertical');
     const removeItem = document.querySelectorAll('.delete');
-    const checkBox = document.querySelectorAll('.box-check');
 
     removeItem.forEach((del, i) => {
       del.addEventListener('click', () => {
@@ -44,8 +43,6 @@ export default class Tasklist {
         ellipsis[i].style.display = 'none';
       });
     }
-
-   
   };
 
   static addToList = () => {
