@@ -1,44 +1,37 @@
 import './style.css';
 
-const tasks = [
-  {
-    index: 1,
-    description: 'Learn Javascript',
-    completed: false,
-  },
-  {
-    index: 2,
-    description: 'Attend Meetings',
-    completed: false,
-  },
-  {
-    index: 3,
-    description: 'Do exercises',
-    completed: false,
-  },
-  {
-    index: 4,
-    description: 'Finish Projects',
-    completed: true,
-  },
-];
-const tasksLoad = () => {
-  const sortedTasks = tasks.sort((a, b) => a.index - b.index);
-  const useTasks = sortedTasks.map((tasks) => `
-    <div class="lists_links">
-      <div class="link_inputs" >
-        <input type="checkbox" name="" id="${tasks.index}" ${tasks.completed ? 'checked' : ''} value="${tasks.completed}">
-        <label for="">${tasks.description}</label>
-      </div>
-      <div class="dots3">
-        <div class="dots"></div>
-        <div class="dots"></div>
-        <div class="dots"></div>
-      </div>
-    </div>
-  `);
+import Tasklist, { addListItem, list } from './modules/script.js';
 
-  document.getElementById('list').innerHTML = useTasks.join('');
-};
+const enterKey = document.getElementById('enter-key');
+const clearButton = document.querySelector('.list-clear');
 
-document.addEventListener('DOMContentLoaded', tasksLoad());
+document.addEventListener('DOMContentLoaded', () => {
+  Tasklist.createList();
+});
+
+addListItem.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    Tasklist.addToList();
+    Tasklist.createList();
+    addListItem.value = '';
+  }
+});
+
+enterKey.addEventListener('click', () => {
+  Tasklist.addToList();
+  Tasklist.createList();
+  document.querySelector('.input-text').value = '';
+});
+
+document.addEventListener('click', (event) => {
+  if (event.target.classList.contains('to-do')) {
+    event.target.parentElement.classList.add('back');
+  }
+});
+
+clearButton.addEventListener('click', () => {
+  const filteredList = list.filter((obj) => obj.complete !== true);
+  localStorage.setItem('listStorage', JSON.stringify(filteredList));
+  Tasklist.createList();
+  window.location.reload();
+});
