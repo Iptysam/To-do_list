@@ -7,12 +7,12 @@ module.exports = class Mocktest {
     this.complete = complete;
   }
 
-  addList(items) {
+  static addList(items) {
     mockTasks.push(items);
     return mockTasks;
   }
 
-  deleteList(index) {
+  static deleteList(index) {
     mockTasks.splice(index, 1);
     return mockTasks;
   }
@@ -25,4 +25,4 @@ module.exports = class Mocktest {
     };
     return task;
   }
-}
+};
