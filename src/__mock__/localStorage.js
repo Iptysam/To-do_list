@@ -21,4 +21,4 @@ const mockTasks = [
   },
 ];
 
-module.export = mockTasks;
+module.exports = mockTasks;
