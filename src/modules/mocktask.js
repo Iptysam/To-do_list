@@ -1,18 +1,18 @@
 const mockTasks = require('../__mock__/localStorage.js');
 
-class mockTest {
-  constructor(description, index, complete) {
+class Mocktest {
+  constructor(description, index = 0, complete = false) {
     this.description = description;
     this.index = index;
     this.complete = complete;
   }
 
-  addList(items) {
+  static addList(items) {
     mockTasks.push(items);
     return mockTasks;
   }
 
-  deleteList(index) {
+  static deleteList(index) {
     mockTasks.splice(index, 1);
     return mockTasks;
   }
@@ -27,4 +27,4 @@ class mockTest {
   }
 }
 
-module.export = mockTest;
+module.export = Mocktest;
