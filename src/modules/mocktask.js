@@ -31,7 +31,7 @@ module.exports = class Mocktest {
     return clearTask;
   }
 
-  EditTest() {
+  static EditTest() {
     mockTasks[this.index].description = this.complete;
     return mockTasks[this.index];
   }
