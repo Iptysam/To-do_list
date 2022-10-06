@@ -13,7 +13,8 @@ describe('adding items', () => {
 
 describe('deleting items', () => {
   test('delete items to list test', () => {
-    expect(Mocktest.deleteList(testlist.getItems()).length).toBe(mockTasks.length);
-    expect(Mocktest.deleteList(testlist2.getItems()).length).toBe(mockTasks.length);
+    expect(Mocktest.deleteList(0).length).toBe(mockTasks.length);
+    expect(Mocktest.deleteList(1).length).toBe(mockTasks.length);
+    expect(Mocktest.deleteList(3).length).toBe(mockTasks.length);
   });
 });
