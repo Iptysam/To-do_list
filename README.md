@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# To do List
+# To do List: Testing
 
 ## Description the project.
 - Create a basic UI using HTML
@@ -8,11 +8,13 @@
 - Use Javascript objects and arrays
 - Use E6 modules
 - Use webpack and served by a webpack dev server
+- Jest Testing for Add Itemes
+- Jest Testing for Delete Items.
 
 ## Built With
 
 - HTML & CSS
-- Javascript
+- Javascript ES6
 - Visual Studio Code
 
 ## Live Demo (if available)
@@ -35,12 +37,28 @@
 - Navigate to the `Conference` directory on your local computer in your above chosen directory and open the `index.html` file.
 ### Usage
 - You can view the HTML document in your preferred or default browser.
+
 ## Authors
 
-👤 **Author1**
+👤 **Iptisam Mukadam**
 
 - GitHub: [@Iptysam](https://github.com/Iptysam)
 - LinkedIn:(www.linkedin.com/in/iptisam-mukadam-4b2b39239)
+
+## Contribution By Partners
+
+👤 **Mudasir Sherwani**
+
+- GitHub: [@Mudasir Sherwani](https://github.com/MudasirSherwani)
+- Twitter: [@Mudasir Sherwani](https://twitter.com/mudasirsherwani)
+- LinkedIn: [Mudasir Sherwani](https://linkedin.com/in/mudasir-ashraf-071321a4)
+
+
+👤 **Tahseen Zahra**
+
+- GitHub: [@tahseenzahra](https://github.com/tahseenzahra)
+- Twitter: [@tahseen1zahra](https://twitter.com/tahseen1zahra)
+- LinkedIn: [@tahseenzahra](https://www.linkedin.com/in/tahseenzahra/)
 
 
 ## 🤝 Contributing
