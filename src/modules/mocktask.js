@@ -26,22 +26,22 @@ module.exports = class Mocktest {
     return task;
   }
 
-  clearCompTask(items) {
+  clearCompTask() {
     const clearTask = (items) => items.filter((task) => !task.complete);
-    return clearTask
+    return clearTask;
   }
 
   EditTest() {
     mockTasks[this.index].description = this.complete;
     return mockTasks[this.index];
-  };
+  }
 
-  IsStatusUpdate () {
-    if (mockTasks[0].completed == false) {
+  IsStatusUpdate() {
+    if (mockTasks[0].completed === false) {
       mockTasks[0].completed = true;
     } else if (mockTasks[0].completed) {
       mockTasks[0].completed = false;
     }
     return mockTasks[0].completed;
-    };
+  }
 };
