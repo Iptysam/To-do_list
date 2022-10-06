@@ -25,4 +25,29 @@ module.exports = class Mocktest {
     };
     return task;
   }
+
+  clearCompTask() {
+    let task = {
+      description: this.description,
+      index: this.index,
+      complete: this.complete,
+    };
+    const clearTask = (items) => items.filter((task) => !task.complete);
+    task = clearTask;
+    return task;
+  }
+
+  EditTest() {
+    mockTasks[this.index].description = this.complete;
+    return mockTasks[this.index];
+  }
+
+  IsStatusUpdate() {
+    if (mockTasks[0].completed === this.complete) {
+      mockTasks[0].completed = true;
+    } else if (mockTasks[0].completed) {
+      mockTasks[0].completed = this.complete;
+    }
+    return mockTasks[0].completed;
+  }
 };
