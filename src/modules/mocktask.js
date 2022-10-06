@@ -25,4 +25,15 @@ module.exports = class Mocktest {
     };
     return task;
   }
+
+  clearCompTask(items) {
+    const clearTask = (items) => items.filter((task) => !items.complete);
+    return clearTask
+  }
+
+  EditTest() {
+    mockTasks[this.index].description = this.complete;
+    return mockTasks[this.index];
+  };
+
 };
