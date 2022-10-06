@@ -26,7 +26,7 @@ module.exports = class Mocktest {
     return task;
   }
 
-  clearCompTask() {
+  static clearCompTask() {
     const clearTask = (items) => items.filter((task) => !task.complete);
     return clearTask;
   }
@@ -36,7 +36,7 @@ module.exports = class Mocktest {
     return mockTasks[this.index];
   }
 
-  IsStatusUpdate() {
+  static IsStatusUpdate() {
     if (mockTasks[0].completed === false) {
       mockTasks[0].completed = true;
     } else if (mockTasks[0].completed) {
